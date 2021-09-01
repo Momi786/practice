@@ -96,13 +96,18 @@
             <!-- Navigation -->
             <ul class="navbar-nav">
                 <li class="nav-item  active ">
-                    <a class="nav-link  active " href="./index.html">
+                    <a class="nav-link  active " href="{{url('/admin')}}">
                         <i class="ni ni-tv-2 text-primary"></i> Dashboard
                     </a>
                 </li>
-                <li class="nav-item ">
-                    <a class="nav-link " href="{{url('admin/experience-list')}}">
+                <li class="nav-item">
+                    <a class="nav-link "href="{{url('admin/experience-list')}}">
                         <i class="ni ni-book-bookmark text-primary"></i> Experience
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link "href="{{url('admin/content')}}">
+                        <i class="ni ni-book-bookmark text-primary"></i> Contant
                     </a>
                 </li>
             </ul>

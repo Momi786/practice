@@ -32,4 +32,8 @@ Route::group(['prefix'=>'admin'], function(){
     Route::get('/edit-experience/{id}',[ExperienceController::class,'edit']);
     Route::post('/edit-experience/{id}',[ExperienceController::class,'editProcess']);
     Route::get('/delete-experience/{id}',[ExperienceController::class,'delete']);
+
+    // About Page Content & Home Page Content
+    Route::get('/content',[AdminController::class,'contant']);
+    Route::post('/content',[AdminController::class,'addprocess']);
 });

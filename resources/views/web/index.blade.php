@@ -1,48 +1,30 @@
 @include('web.inc.header')
 
+@php
+    foreach ($about as $data) {
+        if($data->name == "slide"){
+            $slide = $data;
+        }
+    }
+
+@endphp
+
 <div class="wrapper">
-    <!-- Navbar start -->
-    <nav class="navbar first-navbar navbar-expand-lg navbar-light position-fixed shadow navbarkistyling">
-        <div class="container py-2">
-            <img src="img/logo.png" class="img-fluid logo-size">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav navbarMar Nav-drop">
-                    <li class="nav-item  ml-3">
-                        <a class="nav-link" href="index-2.html">Home </a>
-                    </li>
-                    <li class="nav-item ml-3">
-                        <a class="nav-link" href="#">Videos <i class="fa fa-angle-down"></i></a>
-                        <ul class="custom-dropdown">
-                            <li class="custom-dropdown-item "><a href="forex-video.html">Forex Ustaad</a></li>
-                            <li class="custom-dropdown-item "><a href="technow.html">Technow Pakistan</a></li>
-                            <li class="custom-dropdown-item "><a href="raheel-vlog.html">Raheel Infotainment</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item ml-3">
-                        <a class="nav-link" href="aboutus.html">about us</a>
-                    </li>
-                    <li class="nav-item ml-3">
-                        <a class="nav-link" href="#" data-toggle="modal" data-target=".bd-example-modal-lg"> Contact us</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- Navbar end  -->
+
     <!-- Home banner start -->
     <div class="home-banner-area py-5">
         <div class="container">
             <div class="row py-5">
                 <div class="banner-content col-lg-6 col-md-12 justify-content-center pt-5">
                     <div class="me fontrobo">
-                        It's me
+                        {{$slide->shorttitlr}}
                     </div>
-                    <h1 class="fontpop">Raheel Nawaz</h1>
+                    <h1 class="fontpop">{{$slide->maintitle}}</h1>
                     <div class="intro">
-                        <p class="para fontrobo py-3">I'm a Motivational Speaker | Vlogger | Entrepreneur | Blogger | Freelancer | Marketer | Forex Trader | Forex Trainer | Mentor | Analysist and a Career Counselor <br> <br> <span class="wheel pt-3">People Call me "<span class="barawheel">Wheelchair Wala</span>"</span></p>
+                        <p class="para fontrobo py-3">{{$slide->desc}}</p>
+                    </div>
+                    <div class="intro">
+                        <p class="para fontrobo py-3">{{$slide->title}}</p>
                     </div>
                     <div class="contact">
                         <a href="#" class="btn-contact" data-toggle="modal" data-target=".bd-example-modal-lg">Contact me </a>
@@ -110,71 +92,24 @@
                 </div>
             </div>
             <div class="row">
+                @foreach ($data as $experience)
                 <div class="col-lg-6">
                     <div class="single-job" data-toggle="modal" data-target="#exp-1">
                         <div class="top-sec d-flex justify-content-between">
                             <div class="top-left">
-                                <h4 class="fontpop">Forex Trader</h4>
-                                <p class="fontrobo Experience-description">Gujranwala,Pakistan</p>
+                                <h4 class="fontpop">{{$experience->title}}</h4>
+                                <p class="fontrobo Experience-description">{{$experience->city}}</p>
                             </div>
                             <div class="top-right">
                                 <a href="#" class="btn-date">2010-Till Now</a>
                             </div>
                         </div>
                         <div class=" Experience-description fontrobo">
-                            Would you like me to give you a formula for success? It's quite simple, really: Double your rate of failure. You are thinking of failure as the enemy of success. But it isn't at all. You can be discouraged by failure or you can learn from it, so go ahead and make mistakes. Make all you can. Because remember that's where you will find success
+                            <p>{{$experience->desc}}</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="single-job" data-toggle="modal" data-target="#exp-1">
-                        <div class="top-sec d-flex justify-content-between">
-                            <div class="top-left">
-                                <h4 class="fontpop">Forex Trader Teacher</h4>
-                                <p class="fontrobo Experience-description">Gujranwala,Pakistan</p>
-                            </div>
-                            <div class="top-right">
-                                <a href="#" class="btn-date">2014-Till Now</a>
-                            </div>
-                        </div>
-                        <div class=" Experience-description fontrobo">
-                            “When you want to teach children to think, you begin by treating them seriously when they are little, giving them responsibilities, talking to them candidly, providing privacy and solitude for them, and making them readers and thinkers of significant thoughts from the beginning. That’s if you want to teach them to think.”
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="single-job" data-toggle="modal" data-target="#exp-1">
-                        <div class="top-sec d-flex justify-content-between">
-                            <div class="top-left">
-                                <h4 class="fontpop">Motivational Speaker</h4>
-                                <p class="fontrobo Experience-description">Gujranwala,Pakistan</p>
-                            </div>
-                            <div class="top-right">
-                                <a href="#" class="btn-date">2015-Till Now</a>
-                            </div>
-                        </div>
-                        <div class=" Experience-description fontrobo">
-                            It does not matter how slowly you go as long as you do not stop.<br><br>
-                            Failure will never overtake me if my determination to succeed is strong enough.
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="single-job" data-toggle="modal" data-target="#exp-1">
-                        <div class="top-sec d-flex justify-content-between">
-                            <div class="top-left">
-                                <h4 class="fontpop">Technow Pakistan</h4>
-                                <p class="fontrobo Experience-description">Gujranwala,Pakistan</p>
-                            </div>
-                            <div class="top-right">
-                                <a href="#" class="btn-date">2017-Till Now</a>
-                            </div>
-                        </div>
-                        <div class=" Experience-description fontrobo">
-                            Any software project must have a technical leader, who is responsible for all technical decisions made by the team and have enough authority to make them. Responsibility and authority are two mandatory components that must be present in order to make it possible to call such a person an architect.
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
