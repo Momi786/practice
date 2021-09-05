@@ -110,6 +110,11 @@
                         <i class="ni ni-book-bookmark text-primary"></i> Contant
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link "href="{{url('admin/blog-list')}}">
+                        <i class="ni ni-book-bookmark  text-primary"></i> Blog
+                    </a>
+                </li>
             </ul>
 
         </div>

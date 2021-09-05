@@ -19,6 +19,9 @@
     {{-- datatable --}}
     <link href="{{url('public/assets/admin/tables/css/datatable/dataTables.bootstrap4.min.css')}}" rel="stylesheet">
 
+    {{-- CK Editor --}}
+    <link href="{{url('public/assets/admin/summernote/dist/summernote.css')}}" rel="stylesheet">
+
 </head>
 
 <body class="">

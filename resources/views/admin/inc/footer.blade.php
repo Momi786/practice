@@ -15,6 +15,10 @@
 <script src="{{url('public/assets/admin/tables/js/datatable/dataTables.bootstrap4.min.js')}}"></script>
 <script src="{{url('public/assets/admin/tables/js/datatable-init/datatable-basic.min.js')}}"></script>
 
+{{--CK Editor--}}
+<script src="{{url('public/assets/admin/summernote/dist/summernote.min.js')}}"></script>
+<script src="{{url('public/assets/admin/summernote/dist/summernote-init.js')}}"></script>
+
 </body>
 
 </html>

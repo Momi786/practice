@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ExperienceController;
+use App\Http\Controllers\BlogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,6 +34,9 @@ Route::group(['prefix'=>'admin'], function(){
     Route::post('/edit-experience/{id}',[ExperienceController::class,'editProcess']);
     Route::get('/delete-experience/{id}',[ExperienceController::class,'delete']);
 
+    // Blog Routes
+    Route::get('/blog-list',[BlogController::class,'blogList']);
+    Route::get('/add-blog',[BlogController::class,'addBlog']);
     // About Page Content & Home Page Content
     Route::get('/content',[AdminController::class,'contant']);
     Route::post('/content',[AdminController::class,'addprocess']);

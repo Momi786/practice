@@ -17,7 +17,7 @@
             <div class="row py-5">
                 <div class="banner-content col-lg-6 col-md-12 justify-content-center pt-5">
                     <div class="me fontrobo">
-                        {{$slide->shorttitlr}}
+                        {{$slide->shorttitle}}
                     </div>
                     <h1 class="fontpop">{{$slide->maintitle}}</h1>
                     <div class="intro">
@@ -91,7 +91,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            {{-- <div class="row">
                 @foreach ($data as $experience)
                 <div class="col-lg-6">
                     <div class="single-job" data-toggle="modal" data-target="#exp-1">
@@ -110,7 +110,7 @@
                     </div>
                 </div>
                 @endforeach
-            </div>
+            </div> --}}
         </div>
     </div>
     <!-- latest works section -->
